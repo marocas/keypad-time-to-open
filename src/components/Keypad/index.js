@@ -3,7 +3,7 @@ import { Button, Col, Row } from 'react-bootstrap'
 import useDebounce from '../../hooks/useDebounce'
 import KeypadForm from './KeypadForm'
 import { StyledTable } from './Styled'
-import { arrGenerator, neighbor } from './Utils'
+import { arrGenerator, isNeighbor, neighbors } from './Utils'
 
 const Keypad = () => {
   const [ grid, setGrid ] = useState([])
@@ -20,10 +20,10 @@ const Keypad = () => {
     if (prev && prev !== current) {
       grid.forEach((row, x) => {
         const y = row.indexOf(current)
-        if (y > -1) arr = neighbor(x, y, grid)
+        if (y > -1) arr = neighbors(x, y, grid)
       })
 
-      if (arr.includes(prev)) setSum(sum + 1)
+      if (isNeighbor({ arr, current, prev })) setSum(sum + 1)
       else setSum(sum + 2)
     }
 

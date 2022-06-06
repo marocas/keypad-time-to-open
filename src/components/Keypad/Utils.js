@@ -21,21 +21,19 @@ export const arrGenerator = (size) => {
   return arr2D
 }
 
-export const neighbor = (x, y, grid = []) => {
+export const isNeighbor = ({ arr, prev }) => arr.includes(prev)
+
+export const neighbors = (x, y, grid = []) => {
   const arr = []
 
   if (grid.length > 0)
-    for (let i = -1; i < 1; i++) {
-      for (let j = -1; j < 1; j++) {
+    for (let i = -1; i < 2; i++)
+      for (let j = -1; j < 2; j++) {
         const XX = x + i, YY = y + j
-        if (XX > -1 && YY > -1) {
-          var neighbor = grid[ XX ][ YY ]
-          if (neighbor && neighbor !== grid[ x ][ y ]) {
-            arr.push(neighbor)
-          }
+        if (grid[ XX ] && grid[ XX ][ YY ] && grid[ x ][ y ] !== grid[ XX ][ YY ]) {
+          arr.push(grid[ XX ][ YY ])
         }
       }
-    }
 
   return arr
 }
