@@ -1,9 +1,9 @@
-import 'bootstrap/scss/bootstrap.scss';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { ThemeProvider as StyledTheme } from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 import Layout from './components/Layout';
 import GlobalStyle from './theme/global.styles';
+import 'bootstrap/scss/bootstrap.scss'
 import './theme/index.scss';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,11 +17,12 @@ const theme = {
     xxl: '1920px',
   }
 }
+
 root.render(
   <React.StrictMode>
-    <StyledTheme theme={theme}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Layout />
-    </StyledTheme>
+    </ThemeProvider>
   </React.StrictMode>
 );

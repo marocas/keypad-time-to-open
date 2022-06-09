@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import { Fragment } from 'react'
 import { Col, Dropdown, DropdownButton, FormControl, InputGroup, Row } from 'react-bootstrap'
 
 const KeypadForm = ({ options, option, optionOnChange, inputOnChange }) => (

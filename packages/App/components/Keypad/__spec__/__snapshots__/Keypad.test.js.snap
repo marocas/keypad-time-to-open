@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Keypad Should render 1`] = `undefined`;
+
+exports[`Keypad renders with or without a name 1`] = `
+<div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-12"
+    >
+      <div
+        class="mb-3 input-group"
+      >
+        <button
+          aria-expanded="false"
+          class="dropdown-toggle btn btn-outline-secondary"
+          id="input-group-dropdown-1"
+          type="button"
+        >
+          Size: 3x3
+        </button>
+        <div
+          aria-labelledby="input-group-dropdown-1"
+          class="dropdown-menu"
+          x-placement="bottom-start"
+        >
+          <button
+            class="dropdown-item"
+            data-rr-ui-dropdown-item=""
+          >
+            2x2
+          </button>
+          <button
+            class="dropdown-item"
+            data-rr-ui-dropdown-item=""
+          >
+            3x3
+          </button>
+          <button
+            class="dropdown-item"
+            data-rr-ui-dropdown-item=""
+          >
+            4x4
+          </button>
+          <hr
+            class="dropdown-divider"
+            role="separator"
+          />
+          <button
+            class="dropdown-item"
+            data-rr-ui-dropdown-item=""
+          >
+            custom
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-12"
+    >
+      <code>
+        <pre>
+          door lock, enter code
+        </pre>
+      </code>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-12"
+    >
+      <table
+        class="sc-gsnTZi efzPJv table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              4
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              1
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              2
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              9
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              7
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              8
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              5
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              3
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              6
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="mt-2 col-12"
+    >
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        New Keypad
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders with or without a name 1`] = `
+<div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-12"
+    >
+      <div
+        class="mb-3 input-group"
+      >
+        <button
+          aria-expanded="false"
+          class="dropdown-toggle btn btn-outline-secondary"
+          id="input-group-dropdown-1"
+          type="button"
+        >
+          Size: 3x3
+        </button>
+        <div
+          aria-labelledby="input-group-dropdown-1"
+          class="dropdown-menu"
+          x-placement="bottom-start"
+        >
+          <button
+            class="dropdown-item"
+            data-rr-ui-dropdown-item=""
+          >
+            2x2
+          </button>
+          <button
+            class="dropdown-item"
+            data-rr-ui-dropdown-item=""
+          >
+            3x3
+          </button>
+          <button
+            class="dropdown-item"
+            data-rr-ui-dropdown-item=""
+          >
+            4x4
+          </button>
+          <hr
+            class="dropdown-divider"
+            role="separator"
+          />
+          <button
+            class="dropdown-item"
+            data-rr-ui-dropdown-item=""
+          >
+            custom
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-12"
+    >
+      <code>
+        <pre>
+          door lock, enter code
+        </pre>
+      </code>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="col-12"
+    >
+      <table
+        class="sc-gsnTZi efzPJv table"
+      >
+        <tbody>
+          <tr>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              3
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              8
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              7
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              1
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              2
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              5
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              9
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              4
+            </td>
+            <td
+              class="text-center border-1 cursor-pointer"
+            >
+              6
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    class="row"
+  >
+    <div
+      class="mt-2 col-12"
+    >
+      <button
+        class="btn btn-primary"
+        type="button"
+      >
+        New Keypad
+      </button>
+    </div>
+  </div>
+</div>
+`;

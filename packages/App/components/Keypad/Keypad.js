@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react'
+import { createRef, useEffect, useState } from 'react'
 import { Button, Col, Row } from 'react-bootstrap'
 import useDebounce from '../../hooks/useDebounce'
 import KeypadForm from './KeypadForm'
-import { StyledTable } from './Styled'
+import { Key, KeyRow } from './Styled'
 import { arrGenerator, isNeighbor, neighbors } from './Utils'
 
 const Keypad = () => {
+  const keypadRef = createRef(null)
+  const [ FLAG, setFLAG ] = useState(false)
   const [ grid, setGrid ] = useState([])
   const [ code, setCode ] = useState([])
   const [ sum, setSum ] = useState(0)
@@ -15,7 +17,7 @@ const Keypad = () => {
   const customGridDebounce = useDebounce(gridCustom, 250)
 
 
-  const handleClick = (current) => {
+  const handleKey = (current) => {
     let arr = []
     if (prev && prev !== current) {
       grid.forEach((row, x) => {
@@ -38,9 +40,49 @@ const Keypad = () => {
     setSum(0)
     setPrev(undefined)
   }
+
   useEffect(() => {
     generateKeypad()
   }, [ gridSize, customGridDebounce ])
+
+
+  // const handleKeyPress = (callback) => {
+  //   callback()
+  // }
+
+  // useEffect(() => {
+  //   console.log('here')
+  //   let key = null
+  //   if (keypadRef.current && !FLAG) {
+  //     console.log('keypadRef', keypadRef)
+  //     setFLAG(true)
+  //     document.addEventListener('keydownq', (evt) => {
+  //       handleKeyPress(() => {
+  //         const code = evt.code.replace('Digit', '').replace('Key', '')
+  //         key = document.querySelector(`[data-key="${code}"]`)
+
+  //         console.log(key)
+  //         key && handleKey(Number(code))
+  //       })
+
+  //     })
+
+  //     document.addEventListener('keyup', (evt) => {
+  //       handleKeyPress(() => {
+  //         const code = evt.code.replace('Digit', '').replace('Key', '')
+  //         key = document.querySelector(`[data-key="${code}"]`)
+
+  //         console.log(key)
+  //         key && handleKey(Number(code))
+  //       })
+  //     })
+  //   }
+
+  //   return () => {
+  //     document.removeEventListener('keydown', handleKeyPress)
+  //     document.removeEventListener('keyup', handleKeyPress)
+  //   }
+  // }, [])
 
   return (
     <>
@@ -69,27 +111,24 @@ const Keypad = () => {
         </Col>
       </Row>
 
-      <Row>
-        <Col xs='12'>
-          {grid && (
-            <StyledTable>
-              <tbody>
-                {grid.map((row, idx) => (
-                  <tr key={idx}>
-                    {row.map((key) =>
-                      <td key={key} className="text-center border-1 cursor-pointer"
-                        onClick={(evt) => handleClick(Number(evt.currentTarget.innerText))}
-                      >
-                        {key}
-                      </td>
-                    )}
-                  </tr>
-                ))}
-              </tbody>
-            </StyledTable>
-          )}
-        </Col>
-      </Row>
+      {grid && (
+        <div ref={keypadRef}>
+          {grid.map((row, idx) => (
+            <KeyRow key={idx}>
+              <Col xs="12" className="p-0">
+                {row.map((key) =>
+                  <Key key={key}
+                    data-key={key}
+                    onClick={() => handleKey(Number(key))}
+                  >
+                    {key}
+                  </Key>
+                )}
+              </Col>
+            </KeyRow>
+          ))}
+        </div>
+      )}
 
       {sum > 0 &&
         <Row>

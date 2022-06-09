@@ -1,5 +1,5 @@
 import { Col, Container, Row } from 'react-bootstrap';
-import Keypad from './Keypad';
+import Keypad from './Keypad/index';
 
 const Layout = () => (
   <>
